@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: hsl(233, 47%, 7%);
+    padding: 20px;
+}
+
+#wrapper { 
+    display: flex;
+    width: clamp(20rem, 70rem, 70rem);
+    min-height: 400px;
+    background: hsl(244, 38%, 16%);
+}
+
+#wrapper .right-side {
+    flex: 1 1 50%;
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+}
+
+#wrapper .right-side .right { 
+    padding: 50px 50px; 
+}
+
+#wrapper .left-side { 
+    flex: 1 1 50%;
+}
+
+.left-side figure  {
+    height: 100%;
+}
+
+.left-side img { 
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.right-side .right .main-title { 
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    max-width: 18ch;
+}
+
+.right-side .right .description { 
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    max-width: 40ch;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.right .main-title .different { 
+    color: hsl(277, 64%, 61%);
+}
+
+#wrapper .right-side .stats { 
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+    padding-bottom: 20px;
+}
+
+.right-side .stats div h2 {
+    margin-bottom: 10px;
+    color: hsl(0, 0%, 100%);
+}
+
+.right-side .stats div p {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+@media (max-width: 830px) {
+    #wrapper { 
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #wrapper .right-side .stats {
+        flex-direction: column;
+    }
+    .right-side .stats div { 
+        margin: 20px 0;
+    }
+    .right-side .right .main-title ,
+    .right-side .right .description {
+        max-width: initial;
+    }
+}
